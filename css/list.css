@@ -32,6 +32,10 @@
     flex-shrink: 0;
 }
 
+.list__button:hover {
+    cursor: pointer;
+}
+
 .list__button--done {
     background-color: green;
 }

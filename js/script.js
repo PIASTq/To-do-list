@@ -69,6 +69,8 @@
         const newTask = document.querySelector(".js-input").value.trim();
 
         if (newTask === "") {
+            document.querySelector(".js-input").value = "";
+            document.querySelector(".js-input").focus();
             return;
         }
 
@@ -79,8 +81,6 @@
         const formElement = document.querySelector(".js-form");
 
         formElement.addEventListener("submit", onFormElement);
-
-
     };
 
     init();

@@ -1,0 +1,17 @@
+.article {
+    background-color: white;
+    margin-top: 10px;
+}
+
+.article__header {
+    padding: 20px;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(222, 216, 216);
+}
+
+.article__list {
+    min-height: 40px;
+    list-style-type: none;
+}

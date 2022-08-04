@@ -19,6 +19,8 @@
     <link href="css/header.css" rel="stylesheet">
     <link href="css/article.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -30,15 +32,15 @@
             <article class="article">
                 <p class="article__header">Dodaj nowe zadanie</p>
 
-                <form class="form">
-                    <input class="form__input" placeholder="Co jest do zrobienia?">
-                    <button class="form__submit">Dodaj zadanie</button>
+                <form class="form js-form">
+                    <input class="form__input js-input" placeholder="Co jest do zrobienia?">
+                    <button class="form__submit js-submit">Dodaj zadanie</button>
                 </form>
             </article>
             <article class="article">
                 <p class="article__header">Lista zadań</p>
 
-                <ul class="article__list"></ul>
+                <ul class="list js-list"></ul>
             </article>
         </main>
     </div>

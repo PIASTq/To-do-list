@@ -10,8 +10,3 @@
     font-weight: bold;
     border-bottom: 1px solid rgb(222, 216, 216);
 }
-
-.article__list {
-    min-height: 40px;
-    list-style-type: none;
-}

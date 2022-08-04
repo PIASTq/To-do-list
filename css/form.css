@@ -3,10 +3,24 @@
     display: flex;
 }
 
+@media(max-width: 991px) {
+    .form {
+        flex-wrap: wrap;
+    }
+}
+
 .form__input {
     flex-grow: 1;
     margin-right: 10px;
     border: 1px solid rgb(222, 216, 216);
+    padding: 15px;
+}
+
+@media(max-width: 991px) {
+    .form__input {
+        flex-basis: 990px;
+        margin: 10px 0;
+    }
 }
 
 .form__submit {
@@ -14,6 +28,12 @@
     background-color: teal;
     color: white;
     padding: 15px;
+}
+
+@media(max-width: 991px) {
+    .form__submit {
+        flex-grow: 1;
+    }
 }
 
 .form__submit:hover {

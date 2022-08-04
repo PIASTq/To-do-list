@@ -17,12 +17,17 @@
     margin: 0 10px;
 }
 
+.list__content--done {
+    text-decoration: line-through;
+}
+
 .list__button {
     display: inline-block;
     padding: 5px;
     height: 35px;
     width: 35px;
     border: none;
+    color: white;
 }
 
 .list__button--done {

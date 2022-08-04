@@ -28,6 +28,7 @@
     width: 35px;
     border: none;
     color: white;
+    flex-shrink: 0;
 }
 
 .list__button--done {

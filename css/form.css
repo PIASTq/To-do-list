@@ -3,7 +3,7 @@
     display: flex;
 }
 
-@media(max-width: 991px) {
+@media(max-width: 766px) {
     .form {
         flex-wrap: wrap;
     }
@@ -13,12 +13,12 @@
     flex-grow: 1;
     margin-right: 10px;
     border: 1px solid rgb(222, 216, 216);
-    padding: 15px;
+    padding: 10px;
 }
 
-@media(max-width: 991px) {
+@media(max-width: 766px) {
     .form__input {
-        flex-basis: 990px;
+        flex-basis: 765px;
         margin: 10px 0;
     }
 }
@@ -27,10 +27,10 @@
     border: none;
     background-color: teal;
     color: white;
-    padding: 15px;
+    padding: 10px;
 }
 
-@media(max-width: 991px) {
+@media(max-width: 766px) {
     .form__submit {
         flex-grow: 1;
     }

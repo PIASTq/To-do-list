@@ -1,16 +1,15 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const removeTextFromInput = () => {
         document.querySelector(".js-input").value = "";
     };
 
     const addNewTask = (newTask) => {
-        tasks.push(
-            {
-                content: newTask,
-            },
-        );
+        tasks = [
+            ...tasks,
+            { content: newTask },
+        ];
 
         removeTextFromInput();
 
@@ -18,12 +17,19 @@
     };
 
     const toggleTaskDone = (index) => {
-        tasks[index].done = !tasks[index].done;
+        tasks = [
+            ...tasks.slice(0, index),
+            { ...tasks[index], done: !tasks[index].done },
+            ...tasks.slice(index + 1),
+        ];
         render();
     };
 
     const removeTask = (index) => {
-        tasks.splice(index, 1);
+        tasks = [
+            ...tasks.slice(0, index),
+            ...tasks.slice(index + 1),
+        ];
         render();
     };
 

@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideDoneTasks = false;
 
     const removeTextFromInput = () => {
         document.querySelector(".js-input").value = "";
@@ -51,12 +52,12 @@
         });
     };
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-                <li class="list__item">
+                <li class="list__item ${task.done && hideDoneTasks ? "list__item--hidden": ""}">
                     <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}</button>
                     <span class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</span>
                     <button class="list__button list__button--remove js-remove">🗑</button>
@@ -65,8 +66,34 @@
         }
 
         document.querySelector(".js-list").innerHTML = htmlString;
+    };
+
+    const renderButtons = () => {
+        if (tasks.length > 0) {
+            document.querySelector(".js-listHeader").innerHTML = `
+                Lista zadań
+                <button class="article__button article__button--toggleDoneTasksHiding">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
+                <button class="article__button article__button--doAllTasksDoneButton">Ukończ wszystkie</button>
+            `;
+        } else {
+            document.querySelector(".js-listHeader").innerHTML = `
+                Lista zadań
+            `;
+        }
+    };
+
+    const bindButtonsEvents = () => {
+        const toggleDoneTasksHiding = document.querySelector(".article__button--toggleDoneTasksHiding");
+        const doAllTasksDoneButton = document.querySelector(".article__button--doAllTasksDoneButton");
+
+    };
+
+    const render = () => {
+        renderTasks();
+        renderButtons();
 
         bindEvents();
+        bindButtonsEvents();
     }
 
     const onFormElement = (event) => {

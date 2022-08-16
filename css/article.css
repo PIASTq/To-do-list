@@ -9,4 +9,26 @@
     font-size: 20px;
     font-weight: bold;
     border-bottom: 1px solid rgb(222, 216, 216);
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+}
+
+@media(max-width: 766px) {
+    .article__header {
+        grid-template-columns: 1fr;
+    }
+}
+
+.article__button {
+    display: none;
+    border: none;
+    background-color: white;
+    color: teal;
+    font-size: 17px;
+}
+
+@media(max-width: 766px) {
+    .article__button {
+        margin-top: 20px;
+    }
 }

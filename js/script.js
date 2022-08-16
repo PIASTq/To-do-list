@@ -57,7 +57,7 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li class="list__item ${task.done && hideDoneTasks ? "list__item--hidden": ""}">
+                <li class="list__item ${task.done && hideDoneTasks ? "list__item--hidden" : ""}">
                     <button class="list__button list__button--done js-done">${task.done ? "✔" : ""}</button>
                     <span class="list__content ${task.done ? "list__content--done" : ""}">${task.content}</span>
                     <button class="list__button list__button--remove js-remove">🗑</button>
@@ -73,7 +73,7 @@
             document.querySelector(".js-listHeader").innerHTML = `
                 Lista zadań
                 <button class="article__button article__button--toggleDoneTasksHiding">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-                <button class="article__button article__button--doAllTasksDoneButton">Ukończ wszystkie</button>
+                <button class="article__button article__button--doAllTasksDoneButton ${tasks.every(({done}) => done) ? "article__button-disabled" : ""}" ${tasks.every(({done}) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
             `;
         } else {
             document.querySelector(".js-listHeader").innerHTML = `
@@ -82,10 +82,27 @@
         }
     };
 
+    const onToggleDoneTasksHiding = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+    };
+
+    const onDoAllTasksDoneButton = () => {
+        tasks = tasks.map(task => ({ ...task, done: true }));
+        render();
+    };
+
     const bindButtonsEvents = () => {
         const toggleDoneTasksHiding = document.querySelector(".article__button--toggleDoneTasksHiding");
         const doAllTasksDoneButton = document.querySelector(".article__button--doAllTasksDoneButton");
 
+        if (toggleDoneTasksHiding) {
+            toggleDoneTasksHiding.addEventListener("click", onToggleDoneTasksHiding);
+        }
+
+        if (doAllTasksDoneButton) {
+            doAllTasksDoneButton.addEventListener("click", onDoAllTasksDoneButton);
+        }
     };
 
     const render = () => {

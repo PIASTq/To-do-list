@@ -1,11 +1,12 @@
 .list {
     list-style-type: none;
     padding-bottom: 30px;
+    padding-left: 0;
 }
 
 .list__item {
     padding: 10px;
-    margin-right: 10px;
+    margin: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -9,5 +9,5 @@ html {
 body {
     word-break: break-word;
     font-family: "Lato", sans-serif;
-    background-color: rgb(222, 216, 216);
+    background-color: hsl(0, 8%, 95%);
 }

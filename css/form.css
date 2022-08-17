@@ -28,6 +28,7 @@
     background-color: teal;
     color: white;
     padding: 10px;
+    transition: 1s;
 }
 
 @media(max-width: 766px) {
@@ -38,6 +39,7 @@
 
 .form__submit:hover {
     background-color: hsl(180, 100%, 30%);
+    transform: scale(1.1);
     cursor: pointer;
 }
 

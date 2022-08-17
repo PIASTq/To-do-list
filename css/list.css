@@ -35,6 +35,7 @@
     border: none;
     color: white;
     flex-shrink: 0;
+    transition: 1s;
 }
 
 .list__button:hover {

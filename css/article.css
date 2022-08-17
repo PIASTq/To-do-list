@@ -24,12 +24,17 @@
     background-color: white;
     color: teal;
     font-size: 17px;
+    transition: 1s;
 }
 
 @media(max-width: 766px) {
     .article__button {
         margin-top: 20px;
     }
+}
+
+.article__button:hover {
+    color: hsl(180, 100%, 30%);
 }
 
 .article__button-disabled {

@@ -1,6 +1,6 @@
 # To do list
 
-This is a project made as a 6'th week homework in online programming school **YouCode**
+This is a project made as a 6'th and 7'th week homework in online programming school **YouCode**
 
 ## Description
 

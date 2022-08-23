@@ -6,8 +6,6 @@
 .article__header {
     padding: 20px;
     margin: 0;
-    font-size: 20px;
-    font-weight: bold;
     border-bottom: 1px solid rgb(222, 216, 216);
     display: grid;
     grid-template-columns: 1fr auto auto;
@@ -37,6 +35,6 @@
     color: hsl(180, 100%, 30%);
 }
 
-.article__button-disabled {
+.article__button:disabled {
     color: gray;
 }

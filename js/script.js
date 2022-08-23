@@ -69,17 +69,17 @@
     };
 
     const renderButtons = () => {
+        let headerContent = "Lista zadań";
+
         if (tasks.length > 0) {
-            document.querySelector(".js-listHeader").innerHTML = `
+            headerContent = `
                 Lista zadań
                 <button class="article__button article__button--toggleDoneTasksHiding">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button>
-                <button class="article__button article__button--doAllTasksDoneButton ${tasks.every(({done}) => done) ? "article__button-disabled" : ""}" ${tasks.every(({done}) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
-            `;
-        } else {
-            document.querySelector(".js-listHeader").innerHTML = `
-                Lista zadań
+                <button class="article__button article__button--doAllTasksDoneButton" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
             `;
         }
+
+        document.querySelector(".js-listHeader").innerHTML = headerContent;
     };
 
     const onToggleDoneTasksHiding = () => {
